@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const axios = require("axios");
 const { authenticate } = require("./middlewares");
 const { post } = require("./endpoints");
+const services = require("./services");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const postHandlers = post({ axios });
+const postHandlers = post({ services });
 
 app.post("/", authenticate, postHandlers.post);
 
