@@ -74,7 +74,7 @@ describe("Endpoints", () => {
 
       await postHandlers({ axios }).post(req, res);
       expect(axios.post.mock.calls).toEqual([]); // Que el post no se ha llamado
-      expect(res.sendStatus.mock.calls).toEqual([[500]]); // Recibe un 500
+      expect(res.sendStatus.mock.calls).toEqual([[400]]); // Recibe un 400
     });
   });
 });

@@ -8,7 +8,7 @@ const { post } = require("./endpoints");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const postHandlers = users({ axios });
+const postHandlers = post({ axios });
 
 app.post("/", authenticate, postHandlers.post);
 
