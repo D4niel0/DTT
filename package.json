@@ -6,7 +6,8 @@
   "author": "Daniel Aguilar <daniel.aguilar@pakke.com>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^29.5.0"
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "axios": "^1.4.0",
